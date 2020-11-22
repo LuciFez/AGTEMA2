@@ -1,0 +1,28 @@
+package Controller;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Main {
+	
+	private static List<Integer> cards;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		cards= new ArrayList<Integer>();
+		Random random = new Random();
+		
+		while(cards.size()!=6) {
+			
+			int toAdd = random.nextInt(53);
+			if(!cards.contains(toAdd)) {
+				cards.add(toAdd);
+			}
+		}
+		System.out.println(cards);
+		
+	}
+
+}
